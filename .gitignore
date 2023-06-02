@@ -361,4 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/build/kuzya-x64.exe
 /build/kuzya.7z
+/build/kuzya-x64.exe

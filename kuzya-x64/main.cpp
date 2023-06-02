@@ -37,6 +37,11 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
 		size += f.file_size();
 	}
 
+	if (!size)
+	{
+		return EXIT_FAILURE;
+	}
+
 	char* buffer = new char[size];
 
 	size_t index = 0;
