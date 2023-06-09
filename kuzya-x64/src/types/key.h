@@ -2,7 +2,7 @@
 #include <iostream>
 
 class block;
-class key
+class key//класс описывающий ключ шифрования размерность 256 бит/32 байта, что равно двум блокам
 {
 private:
 	static key F(key& k, block& c);

@@ -2,7 +2,7 @@
 #include <iostream>
 
 class byte;
-class block
+class block// класс описывающий блок данных для шифрования (16 байт/128 бит)
 {
 public:
 	byte* value;
@@ -19,10 +19,10 @@ public:
 	byte& operator[](int indx);
 	const byte& operator[](int indx) const;
 
-	block operator+(const block& a);
+	block operator+(const block& a);// сложение блоков / преобразование X (xor байт одного блока с байтами другого блока)
 	void operator+=(const block& a);
 
-	void operator<<=(const int pos);
+	void operator<<=(const int pos);// сдвиг на 1 влева (больше алгоритму не требуется, поэтому реализовывать не стал)
 
 	void Clear();
 	std::string ToString();

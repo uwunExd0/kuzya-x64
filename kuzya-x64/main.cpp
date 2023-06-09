@@ -10,8 +10,8 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
 {
 	int argc = __argc;
 	char** argv = __argv;
-	std::vector<std::filesystem::directory_entry> files;
-	for (int i = 0; i < argc-1; ++i)
+	std::vector<std::filesystem::directory_entry> files;// вектор со всеми файлами в директории
+	for (int i = 0; i < argc-1; ++i)//парсирование аргументов
 	{
 		if (!strcmp(argv[i], "--file"))
 		{
@@ -75,7 +75,7 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
 		GlobalUnlock(hMem);
 		OpenClipboard(0);
 		EmptyClipboard();
-		SetClipboardData(CF_TEXT, hMem);
+		SetClipboardData(CF_TEXT, hMem);//записать рассчитаную контрольную сумму в буфер обмена
 		CloseClipboard();
 	}
 
